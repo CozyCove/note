@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Hi
+  <form method="POST"  action="/write">
+    {% csrf_token %}
+    <input name="text">
+    <button type="submit">note</button>
+  </form>
+  
+</body>
+</html>
