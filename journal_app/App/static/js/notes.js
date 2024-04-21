@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const notes = document.getElementById("notes");
     const newNote = document.createElement("p");
     newNote.innerText = `data:${data.notes}`;
+    
   }
 
   getNotes().then((data) => {
@@ -24,7 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
     data.notes.forEach((element) => {
       const newNote = document.createElement("p");
       newNote.innerText = `${element.text}`;
+      newNote.style.marginTop = `40px`
+      newNote.style.marginLeft = `10px`
       notes.appendChild(newNote);
+      newNote.className = "flex justify-center ";
       console.log(data);
     });
   });
